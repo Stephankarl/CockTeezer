@@ -1,0 +1,25 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <h1>All Liquor</h1>
+    <div class="row">
+        <% liquor.forEach((liquor) => { %>
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="/liquor/<%= liquor.id %>/edit">
+                            <h5 class="card-title"><%= liquor.name %></h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><%= liquor.type %></h6>
+                            <p class="card-text"><%= liquor.category %></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+    <a href="/liquor/new"><button class="btn btn-primary">Add new Liquor</button></a>
+    <a href="/"><button class="btn btn-secondary">HomePage</button></a>
+</div>
+
+
+<%- include('../partials/footer') -%>

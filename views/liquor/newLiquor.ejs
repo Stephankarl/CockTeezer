@@ -1,0 +1,35 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <h1>This is new liquor form</h1>
+
+    <form action="/liquor" method="post">
+        
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="type" placeholder="Type of Alcohol" required>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="name" placeholder="Name of Alcohol" required>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="category" placeholder="Category of Alcohol">
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="country" placeholder="Country of Alcohol">
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="abv" placeholder="ABV of Alcohol" required>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="quantity" placeholder="Quantity of Bottle" required>
+            </div>
+            <div class="form-group col-md-6">
+                <button type="submit" class="btn btn-secondary form-control">Submit</button>
+            </div>
+        
+    </form>
+
+    <a href="/liquor"><button class="btn btn-primary">Back to Liquor</button></a>
+</div>
+
+<%- include('../partials/footer') -%>

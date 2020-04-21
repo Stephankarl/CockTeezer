@@ -1,0 +1,26 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <h1>This is new Mixer form</h1>
+
+    <form action="/mixers" method="post">
+        
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="type" placeholder="Type of Mixer" required>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="name" placeholder="Name of Mixer">
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="quantity" placeholder="Quantity of Bottle" required>
+            </div>
+            <div class="form-group col-md-6">
+                <button type="submit" class="btn btn-secondary form-control">Submit</button>
+            </div>
+        
+    </form>
+
+    <a href="/mixers"><button class="btn btn-primary">Back to Mixers</button></a>
+</div>
+
+<%- include('../partials/footer') -%>

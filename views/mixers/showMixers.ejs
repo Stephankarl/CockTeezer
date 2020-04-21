@@ -1,0 +1,23 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <h1>All Mixers</h1>
+    <div class="row">
+        <% mixers.forEach((mixer) => { %>
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="/mixers/<%= mixer.id %>/edit">
+                            <h6 class="card-subtitle mb-2 text-muted"><%= mixer.type %></h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+    <a href="/mixers/new"><button class="btn btn-primary">Add new mixer</button></a>
+    <a href="/"><button class="btn btn-secondary">HomePage</button></a>
+</div>
+
+
+<%- include('../partials/footer') -%>

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1587355661002",
+    "type": "Tequila",
+    "name": "Jose Cuervo",
+    "category": "Silver Tequila",
+    "country": "Mexico",
+    "abv": "40",
+    "quantity": "750"
+  },
+  {
+    "id": "1587355658980",
+    "type": "Vodka",
+    "name": "Skyy",
+    "category": "Premium",
+    "country": "United States of America",
+    "abv": "40",
+    "quantity": "750"
+  },
+  {
+    "id": "1587434383186",
+    "type": "Vodka",
+    "name": "Kettle One",
+    "category": "Premium",
+    "country": "USA",
+    "abv": "40",
+    "quantity": "750"
+  }
+]

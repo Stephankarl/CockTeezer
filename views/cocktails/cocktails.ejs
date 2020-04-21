@@ -1,0 +1,11 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <h1>This is the cocktail page</h1>
+    <% cocktails.forEach((cocktail) => { %>
+        <h3><%= cocktail.name %></h3>
+        <p><%= cocktail.ingrediants.type %></p>
+    <% }); %>
+</div>
+
+<%- include('../partials/footer') -%>
