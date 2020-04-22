@@ -26,6 +26,19 @@ class Mixers {
     }
 
     store(data) {
+        //sorting data alphabetically
+        data.sort((a, b) => {
+            let typeA = a.type.toUpperCase(); 
+            let typeB = b.type.toUpperCase(); 
+            if (typeA < typeB) {
+              return -1;
+            }
+            if (typeA > typeB) {
+              return 1;
+            }
+            return 0;
+        });
+        //Store Data
         const rawData = JSON.stringify(data, null, 2);
         fs.writeFile(PATH, rawData, (err) => {
             if (err) throw err;

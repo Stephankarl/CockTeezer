@@ -19,6 +19,19 @@ class Liquor {
     }
 
     store(data) {
+        //sorting data alphabetically
+        data.sort((a, b) => {
+            let nameA = a.name.toUpperCase(); 
+            let nameB = b.name.toUpperCase(); 
+            if (nameA < nameB) {
+              return -1;
+            }
+            if (nameA > nameB) {
+              return 1;
+            }
+            return 0;
+        });
+        //Storing the data
         const rawdata = JSON.stringify(data, null, 2);
         fs.writeFile(liquorPath, rawdata, (err) => {
             if (err) throw err;
