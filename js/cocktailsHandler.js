@@ -5,12 +5,25 @@ class Cocktails {
     readData() {
         const rawData = fs.readFileSync(PATH);
         const data = JSON.parse(rawData);
-        console.log(data);
         return data;
     }
 
     get() {
         return this.readData();
+    }
+
+    add(data) {
+        let allCocktails = this.get();
+        allCocktails.push(data);
+        this.store(allCocktails);
+    }
+
+    store(data) {
+        const rawData = JSON.stringify(data, null, 2);
+        fs.writeFile(PATH, rawData, (err) => {
+            if (err) throw err;
+            console.log('Data Saved');
+        });
     }
 }
 

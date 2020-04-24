@@ -1,0 +1,19 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <h1>This is new Optional form</h1>
+
+    <form action="/contentoptions/optional" method="post">
+        
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="type" placeholder="Type of Optional" required>
+            </div>
+            <div class="form-group col-md-6">
+                <button type="submit" class="btn btn-secondary form-control">Submit</button>
+            </div>
+    </form>
+
+    <a href="/contentoptions/optional"><button class="btn btn-primary">Back to Content</button></a>
+</div>
+
+<%- include('../partials/footer') -%>

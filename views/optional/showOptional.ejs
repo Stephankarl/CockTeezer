@@ -1,0 +1,21 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <h1>All Options</h1>
+    <div class="row">
+        <% options.forEach((option) => { %>
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted"><%= option.type %></h6>
+                        <a href="/contentoptions/optional/<%= option.id %>" class="text-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+    <a href="/contentoptions/optional/new"><button class="btn btn-secondary">Add Content</button></a>
+</div>
+
+
+<%- include('../partials/footer') -%>

@@ -1,14 +1,5 @@
 [
   {
-    "id": "1587454664262",
-    "type": "amarula",
-    "name": "amarula",
-    "category": "",
-    "country": "South Africa",
-    "abv": "30",
-    "quantity": "750"
-  },
-  {
     "id": "1587355661002",
     "type": "Tequila",
     "name": "Jose Cuervo",
@@ -46,11 +37,11 @@
   },
   {
     "id": "1587451507324",
-    "type": "vodka",
-    "name": "skyy",
-    "category": "premium",
+    "type": "Vodka",
+    "name": "Skyy",
+    "category": "",
     "country": "United States of America",
     "abv": "40",
-    "quantity": "750"
+    "quantity": "500"
   }
 ]

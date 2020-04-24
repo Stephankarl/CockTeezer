@@ -1,7 +1,19 @@
 <%- include('../partials/header') -%>
 
 <div class="container">
-    <h1>This is the cocktail page</h1>
+    <h1>This is the Cocktails Page</h1>
+    <div class="row">
+        <% cocktails.forEach((cocktail) => { %>
+            <div class="col-3">
+                <div class="card">
+                    <a href="/cocktails/<%= cocktail.id %>"><div class="card-img-top" id="cocktail-image"></div> <!--Insert img from json file-->
+                    <div class="card-body">
+                        <h5 class="card-title"><%= cocktail.name %></h5>
+                    </div></a>
+                </div>
+            </div>
+        <% }); %>
+    </div>
 </div>
 
 <%- include('../partials/footer') -%>

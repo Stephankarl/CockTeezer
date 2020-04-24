@@ -1,0 +1,148 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <h1>This form is to add a new Cocktail</h1>
+    <!-- Creating a form adding cocktails -->
+    <form action="/cocktails" method="POST" id="add-cocktail-form">
+        <div class="form-group">
+          <h3>Name of Cocktail</h3>
+          <input type="text" class="form-control" id="name-of-cocktail" placeholder="Cocktail Name" name="cocktailName">
+        </div>
+
+        <!-- Liquor field  -->
+        <h3>Liquor</h3>
+        <div class="row" id="liquor-row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="liquor-type">Type</label>
+                    <select class="form-control" id="liquor-type" name="liquor[type]">
+                        <option disabled selected value> -- select an option -- </option>
+                        <% liquor.forEach((liquor) => { %>
+                            <option><%= liquor.type %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="liquor-category">Category</label>
+                    <select class="form-control" id="liquor-category" name="liquor[category]">
+                        <option disabled selected value> -- select an option -- </option>
+                        <% liquor.forEach((liquor) => { %>
+                            <option><%= liquor.category %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="liquor-name">Name</label>
+                    <select id="liquor-name" class="form-control" name="liquor[name]">
+                        <option disabled selected value> -- select an option -- </option>
+                        <% liquor.forEach((liquor) => { %>
+                            <option><%= liquor.name %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="liquor-options-quantity">Quantity</label>
+                    <input class="form-control" type="number" id="liquor-options-quantity" name="liquor[quantity]">
+                </div>
+            </div>
+        </div>
+        <div id="add-liquor-row"></div>
+        <div class="col text-right">
+            <button type="button" onclick="addLine('liquor-row', 'add-liquor-row')"><i class="fas fa-plus"></i></button>
+        </div>
+
+        <!-- Mixer field  -->
+        <h3>Mixers</h3>
+        <div class="row" id="mixers-row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="mixers-type">Type</label>
+                    <select class="form-control" id="mixers-type" name="mixer[type]">
+                        <option disabled selected value> -- select an option -- </option>
+                        <% mixers.forEach((mixer) => { %>
+                            <option><%= mixer.type %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="mixers-name">Name</label>
+                    <select id="mixers-name" class="form-control" name="mixer[name]">
+                        <option disabled selected value> -- select an option -- </option>
+                    <% mixers.forEach((mixer) => { %>
+                        <option><%= mixer.name %></option>
+                    <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="mixers-options-quantity">Quantity</label>
+                    <input class="form-control" type="number" id="mixers-options-quantity" name="mixer[quantity]">
+                </div>
+            </div>
+        </div>
+        <div id="add-mixers-row"></div>
+        <div class="col text-right">
+            <button type="button" onclick="addLine('mixers-row', 'add-mixers-row')"><i class="fas fa-plus"></i></button>
+        </div>
+        <!-- Content field  -->
+        <h3>Content</h3>
+        <div class="row" id="content-row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="content-options">Options</label>
+                    <select class="form-control" id="content-options" name="content[type]">
+                        <option disabled selected value> -- select an option -- </option>
+                        <% content.forEach((content) => { %>
+                            <option><%= content.type %></option>
+                        <% }); %>
+                    </select>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="content-options-quantity">Quantity</label>
+                    <input class="form-control" type="number" id="content-options-quantity" name="content[quantity]">
+                </div>
+            </div>
+        </div>
+        <div id="add-content-row"></div>
+        <div class="col text-right">
+            <button type="button" onclick="addLine('content-row', 'add-content-row')"><i class="fas fa-plus"></i></button>
+        </div>
+        
+        <!-- Optional field  -->
+        <h3>Optional Content</h3>
+        <div class="row" id="optional-row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="optional">Optional</label>
+                    <select class="form-control" id="content-options" name="optional[type]">
+                        <option disabled selected value> -- select an option -- </option>
+                        <% optional.forEach((option) => { %>
+                            <option><%= option.type %></option>
+                        <% }); %>
+                    </select>
+                  </div>
+            </div>
+        </div>
+        <div id="add-optional-row"></div>
+        <div class="col text-right">
+            <button type="button" onclick="addLine('optional-row', 'add-optional-row')"><i class="fas fa-plus"></i></button>
+        </div>
+        
+        <input type="submit">
+    </form>
+</div>
+
+<script src="/js/cocktail.js"></script>
+
+<%- include('../partials/footer') -%>

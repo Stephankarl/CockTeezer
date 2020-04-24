@@ -1,0 +1,53 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <h1>Show Individual Cocktail</h1>
+    <div class="row">
+        <div class="col-3" id="image"></div>
+        <div class="content col-9">
+            <div class="cocktail-name"><h2 id="cocktail-name"><%= cocktail.name %></h2></div>
+            <div class="cocktail-ingrediants">
+                <table class="table table-striped">
+                    <tr>
+                        <th scope="col">Ingrediants</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                    <% cocktail.ingrediants.forEach((ingrediant) => { %>
+                        <tr scope="row">
+                            <td><%= ingrediant.name %> <%= ingrediant.type %> <%= ingrediant.category %></td>
+                            <td><%= ingrediant.quantity %></td>
+                        </tr>
+                    <% }); %>
+                    <tr>
+                        <th scope="col">Mixers</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                    <% cocktail.mixers.forEach((mixer) => { %>
+                        <tr scope="row">
+                            <td><%= mixer.name %> <%= mixer.type %> <%= mixer.category %></td>
+                            <td><%= mixer.quantity %></td>
+                        </tr>
+                    <% }); %>
+                    <tr>
+                        <th scope="col">Added Content</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                    <% cocktail.addedContent.forEach((content) => { %>
+                        <tr scope="row">
+                            <td><%= content.name %> <%= content.type %> <%= content.category %></td>
+                            <td><%= content.quantity %></td>
+                        </tr>
+                    <% }); %>
+                </table>
+                <div class="added-content">
+                    <ul>This is option content you can add.</ul>
+                    <% cocktail.optional.forEach((option) => { %>
+                        <li> <%= option.type %></li>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') -%>

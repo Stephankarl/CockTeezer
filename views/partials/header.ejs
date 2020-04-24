@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5ddf4751e6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <title>CockTeezer</title>
 </head>
@@ -15,6 +16,17 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav justify-content-end" id="nav-list">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/cocktails" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cocktails
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/cocktails">Show Cocktails</a>
+                <a class="dropdown-item" href="/cocktails/new">Add Cocktail</a>
+              </div>
+            </li>
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="/liquor" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Liquor
@@ -24,6 +36,7 @@
                 <a class="dropdown-item" href="/liquor/new">Add Liquor</a>
               </div>
             </li>
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="/mixers" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Mixers
@@ -31,6 +44,16 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/mixers">Show Mixers</a>
                 <a class="dropdown-item" href="/mixers/new">Add a Mixer</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/contentoptions" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Content and Optionals
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/contentoptions/content">Show Content</a>
+                <a class="dropdown-item" href="/contentoptions/optional">Show Optionals</a>
               </div>
             </li>
           </ul>

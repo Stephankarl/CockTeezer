@@ -2,3 +2,15 @@
     width: 100%;
     margin-right: 5%;
 }
+
+#cocktail-image {
+    height: 250px;
+    background-image: url(/uploads/default\ 2\ picture.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#image {
+    background-size: cover;
+    background-position: center;
+}

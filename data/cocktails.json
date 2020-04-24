@@ -1,61 +1,82 @@
 [
-    {
-        "name": "margarita",
-        "ingrediants": [
-            {
-                "type": "tequila",
-                "name": "patron",
-                "category": "silver",
-                "quantity": 1
-            },
-            {
-                "type": "triple sec",
-                "name": "cointreau",
-                "category": "",
-                "quantity": 0.5
-            }
-        ],
-        "mixers": [
-            {
-                "type": "magarita mix",
-                "quantity": 5
-            },
-            {
-                "type": "orange juice",
-                "quantity": 2
-            }
-        ],
-        "added content": [
-            {
-                "type": "lime",
-                "quantity": 1
-            }
-        ],
-        "image": ""
-    },
-    {
-        "name": "daiquiri",
-        "ingrediants": [
-            {
-                "type": "rum",
-                "name": "bacardi",
-                "category": "white rum",
-                "quantity": 1.25
-            }
-        ],
-        "mixers": [
-            {
-                "type": "sweet and sour mix",
-                "quantity": 5
-            },
-            {
-                "type": "lime juice",
-                "quantity": 2
-            }
-        ],
-        "added content": {
-            "optional": ["strawberry flavor", "raspberry flavor", "blueberry flavor"]
-        },
-        "image": ""
-    }
+  {
+    "id": "1",
+    "name": "Margarita",
+    "ingrediants": [
+      {
+        "type": "tequila",
+        "name": "patron",
+        "category": "silver",
+        "quantity": 1
+      },
+      {
+        "type": "triple sec",
+        "name": "cointreau",
+        "category": "",
+        "quantity": 0.5
+      }
+    ],
+    "mixers": [
+      {
+        "type": "magarita mix",
+        "quantity": 5
+      },
+      {
+        "type": "orange juice",
+        "quantity": 2
+      }
+    ],
+    "addedContent": [
+      {
+        "type": "lime",
+        "quantity": 1
+      }
+    ],
+    "optional": [
+      {
+        "type": ""
+      }
+    ],
+    "image": "uploads/picture default.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Daiquiri",
+    "ingrediants": [
+      {
+        "type": "rum",
+        "name": "bacardi",
+        "category": "white rum",
+        "quantity": 1.25
+      }
+    ],
+    "mixers": [
+      {
+        "type": "sweet and sour mix",
+        "quantity": 5
+      },
+      {
+        "type": "lime juice",
+        "quantity": 2
+      }
+    ],
+    "addedContent": [
+      {
+        "type": "lime",
+        "quantity": 1
+      }
+    ],
+    "optional": [
+      {
+        "type": "Strawberry flavor"
+      },
+      {
+        "type": "Raspberry flavor"
+      },
+      {
+        "type": "Blueberry flavor"
+      }
+    ],
+    "image": "uploads/picture 2 default.jpg"
+  }
 ]
